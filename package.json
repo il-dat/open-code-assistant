@@ -4,6 +4,7 @@
   "description": "Local AI-powered code completion from Ollama",
   "version": "0.0.0",
   "publisher": "datnguye",
+  "icon": "resources/icon.svg",
   "engines": {
     "vscode": "^1.74.0",
     "node": ">=20.0.0"
@@ -146,6 +147,5 @@
     "type": "git",
     "url": "https://github.com/il-dat/open-code-assistant"
   },
-  "license": "Apache-2.0",
-  "icon": "resources/icon.png"
+  "license": "Apache-2.0"
 }
