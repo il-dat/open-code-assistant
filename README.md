@@ -78,7 +78,7 @@ The Ollama Code Pilot sidebar provides:
 
 ### Prerequisites
 
-- Node.js v16.x or higher
+- Node.js v20.x or higher
 - npm v7.x or higher
 - Visual Studio Code
 - Ollama installed locally
