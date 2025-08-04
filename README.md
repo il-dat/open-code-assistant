@@ -1,19 +1,9 @@
 # Ollama Code Pilot
 
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/datnguye.ollama-code-pilot)](https://marketplace.visualstudio.com/items?itemName=datnguye.ollama-code-pilot)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 Local AI-powered code completion for Visual Studio Code using Ollama.
-
-## Table of Contents
-
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Development](#development)
-- [Configuration](#configuration)
-- [Supported Models](#supported-models)
-- [Troubleshooting](#troubleshooting)
-- [Attribution](#attribution)
-- [License](#license)
 
 ## Features
 
@@ -241,6 +231,28 @@ The test suite includes:
    - Install: `code --install-extension ollama-code-pilot-0.1.0.vsix`
    - Or drag the .vsix file into VS Code Extensions view
 
+### Publishing to VS Code Marketplace
+
+The extension is automatically published when a version tag is pushed:
+
+```bash
+# Update version in package.json
+npm version patch  # or minor/major
+
+# Push changes and tag
+git push origin main
+git push origin v0.1.0  # Use the new version number
+```
+
+The GitHub Actions workflow will:
+- Run tests on multiple platforms
+- Build and package the extension
+- Publish to VS Code Marketplace
+
+**Prerequisites:**
+- VS Code Marketplace publisher account
+- `VSCE_PAT` secret configured in GitHub repository
+
 ### Project Structure
 
 ```
@@ -319,7 +331,7 @@ This extension is built with:
 
 ## License
 
-This extension is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+This extension is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
 
 ## About Infinite Lambda
 Infinite Lambda is a cloud and data consultancy. We build strategies, help organisations implement them and pass on the expertise to look after the infrastructure.

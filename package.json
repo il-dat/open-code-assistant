@@ -2,7 +2,7 @@
   "name": "ollama-code-pilot",
   "displayName": "Ollama Code Pilot",
   "description": "Local AI-powered code completion from Ollama",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "publisher": "datnguye",
   "engines": {
     "vscode": "^1.74.0"
@@ -142,6 +142,6 @@
     "type": "git",
     "url": "https://github.com/il-dat/open-code-assistant"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "icon": "resources/icon.png"
 }
