@@ -1,5 +1,7 @@
 # Ollama Code Pilot
 
+⚠️ THIS IS CURRENTLY EXPERIMENTAL ONLY
+
 [![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/datnguye.ollama-code-pilot)](https://marketplace.visualstudio.com/items?itemName=datnguye.ollama-code-pilot)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
