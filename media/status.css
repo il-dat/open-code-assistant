@@ -1,0 +1,93 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-size: var(--vscode-font-size);
+    color: var(--vscode-foreground);
+}
+
+.status-container {
+    padding: 10px;
+}
+
+.status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.status-header h3 {
+    margin: 0;
+    font-weight: 500;
+}
+
+#refresh-btn {
+    background: none;
+    border: 1px solid var(--vscode-button-border);
+    color: var(--vscode-button-foreground);
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+#refresh-btn:hover {
+    background: var(--vscode-button-hoverBackground);
+}
+
+.status-content {
+    margin-bottom: 20px;
+}
+
+.status-item {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: flex-start;
+}
+
+.label {
+    font-weight: 500;
+    margin-right: 10px;
+    min-width: 100px;
+}
+
+.value {
+    color: var(--vscode-descriptionForeground);
+}
+
+.models-list {
+    max-height: 150px;
+    overflow-y: auto;
+    margin-top: 5px;
+}
+
+.model-item {
+    padding: 2px 0;
+    color: var(--vscode-descriptionForeground);
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 6px 12px;
+    background: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.action-btn:hover {
+    background: var(--vscode-button-hoverBackground);
+}
+
+.status-online {
+    color: var(--vscode-testing-iconPassed);
+}
+
+.status-offline {
+    color: var(--vscode-testing-iconFailed);
+}

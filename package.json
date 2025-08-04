@@ -1,0 +1,147 @@
+{
+  "name": "ollama-code-pilot",
+  "displayName": "Ollama Code Pilot",
+  "description": "Local AI-powered code completion from Ollama",
+  "version": "0.1.0",
+  "publisher": "datnguye",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "AI",
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "AI assistant",
+    "code completion",
+    "local LLM",
+    "inline suggestions",
+    "ollama"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ollama-code-pilot.complete",
+        "title": "Ollama: Complete with Model"
+      },
+      {
+        "command": "ollama-code-pilot.selectModel",
+        "title": "Ollama: Select Model"
+      },
+      {
+        "command": "ollama-code-pilot.showStatus",
+        "title": "Ollama: Show Status"
+      }
+    ],
+    "configuration": {
+      "title": "Ollama Code Pilot",
+      "properties": {
+        "ollama.codeCompletion.providerUrl": {
+          "type": "string",
+          "default": "http://localhost:11434",
+          "description": "Ollama API server URL"
+        },
+        "ollama.codeCompletion.model": {
+          "type": "string",
+          "default": "codellama",
+          "description": "Default model for code completion"
+        },
+        "ollama.codeCompletion.triggerCharacters": {
+          "type": "array",
+          "default": [
+            ".",
+            " ",
+            "(",
+            "[",
+            "{"
+          ],
+          "description": "Characters that trigger code completion"
+        },
+        "ollama.codeCompletion.maxTokens": {
+          "type": "number",
+          "default": 100,
+          "description": "Maximum tokens to generate"
+        },
+        "ollama.codeCompletion.temperature": {
+          "type": "number",
+          "default": 0.2,
+          "description": "Temperature for generation (0.0-1.0)"
+        },
+        "ollama.api.authToken": {
+          "type": "string",
+          "default": "",
+          "description": "Optional authentication token for Ollama API"
+        },
+        "ollama.telemetry.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable telemetry (opt-in)"
+        }
+      }
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "ollama-code-pilot",
+          "title": "Ollama Code Pilot",
+          "icon": "resources/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "ollama-code-pilot": [
+        {
+          "id": "ollama-status",
+          "name": "Status",
+          "type": "webview"
+        },
+        {
+          "id": "ollama-models",
+          "name": "Models",
+          "type": "tree"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "test:coverage": "c8 --reporter=html --reporter=text npm test",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/sinon": "^10.0.20",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "@vscode/test-electron": "^2.2.0",
+    "@vscode/vsce": "^2.22.0",
+    "eslint": "^8.28.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "sinon": "^15.0.0",
+    "typescript": "^4.9.3",
+    "c8": "^8.0.1"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/il-dat/open-code-assistant"
+  },
+  "license": "MIT",
+  "icon": "resources/icon.png"
+}
