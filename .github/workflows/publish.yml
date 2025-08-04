@@ -37,7 +37,7 @@ jobs:
           # Extract version from tag (without 'v' prefix)
           VERSION=${GITHUB_REF#refs/tags/v}
           # Publish with explicit version (vsce will update package.json)
-          npx vsce publish $VERSION -p ${{ secrets.VSCE_PAT }}
+          npx @vscode/vsce@2.22.0 publish $VERSION -p ${{ secrets.VSCE_PAT }}
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
 

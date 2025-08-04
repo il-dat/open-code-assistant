@@ -116,7 +116,7 @@
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",
     "test:coverage": "c8 --reporter=html --reporter=text npm test",
-    "package": "vsce package"
+    "package": "npx @vscode/vsce@2.22.0 package"
   },
   "devDependencies": {
     "@types/glob": "^8.0.0",
